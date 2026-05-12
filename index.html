@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Info</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            background:#f4f4f4;
+            color:#333;
+        }
+
+        header{
+            background:#0d1b2a;
+            padding:15px 40px;
+            position:sticky;
+            top:0;
+            z-index:1000;
+        }
+
+        nav{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            color:white;
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:20px;
+        }
+
+        nav a{
+            color:white;
+            text-decoration:none;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        nav a:hover{
+            color:#00b4d8;
+        }
+
+        .hero{
+            position:relative;
+            height:90vh;
+            overflow:hidden;
+        }
+
+        .hero img{
+            width:100%;
+            height:100%;
+            object-fit:cover;
+        }
+
+        .hero-content{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform:translate(-50%, -50%);
+            text-align:center;
+            color:white;
+            background:rgba(0,0,0,0.5);
+            padding:30px;
+            border-radius:10px;
+        }
+
+        .hero-content h1{
+            font-size:60px;
+            margin-bottom:20px;
+        }
+
+        .hero-content p{
+            font-size:22px;
+            margin-bottom:20px;
+        }
+
+        .btn{
+            padding:12px 25px;
+            background:#00b4d8;
+            color:white;
+            border:none;
+            border-radius:5px;
+            cursor:pointer;
+            font-size:18px;
+        }
+
+        section{
+            padding:70px 50px;
+        }
+
+        h2{
+            text-align:center;
+            margin-bottom:40px;
+            font-size:40px;
+            color:#0d1b2a;
+        }
+
+        .cards{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .card{
+            background:white;
+            border-radius:10px;
+            overflow:hidden;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+            transition:0.3s;
+        }
+
+        .card:hover{
+            transform:translateY(-10px);
+        }
+
+        .card img{
+            width:100%;
+            height:220px;
+            object-fit:cover;
+        }
+
+        .card-content{
+            padding:20px;
+        }
+
+        .card-content h3{
+            margin-bottom:10px;
+        }
+
+        .pricing-container{
+            display:flex;
+            flex-wrap:wrap;
+            gap:30px;
+            justify-content:center;
+        }
+
+        .price-box{
+            background:white;
+            padding:30px;
+            width:300px;
+            border-radius:10px;
+            text-align:center;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .price-box h3{
+            margin-bottom:15px;
+        }
+
+        .price{
+            font-size:40px;
+            color:#00b4d8;
+            margin:20px 0;
+        }
+
+        .gallery{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:20px;
+        }
+
+        .gallery img{
+            width:100%;
+            height:250px;
+            object-fit:cover;
+            border-radius:10px;
+        }
+
+        .contact-box{
+            max-width:700px;
+            margin:auto;
+            background:white;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .contact-box input,
+        .contact-box textarea{
+            width:100%;
+            padding:12px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:5px;
+        }
+
+        footer{
+            background:#0d1b2a;
+            color:white;
+            text-align:center;
+            padding:20px;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <div class="logo">TravelInfo</div>
+
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#destinations">Destinations</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- HERO SECTION -->
+
+        <section id="home" class="hero">
+
+            <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=2070&auto=format&fit=crop" alt="Travel">
+
+            <div class="hero-content">
+                <h1>Explore The World</h1>
+
+                <p>
+                    Travel to beautiful destinations with affordable packages,
+                    luxury hotels, and unforgettable experiences. Whether you seek adventure, relaxation, or cultural immersion, we have the perfect trip for you. Our experts handle all the details, so you can focus on making memories.
+                </p>
+
+                <button class="btn">Start Journey</button>
+            </div>
+
+        </section>
+
+        <!-- DESTINATIONS -->
+
+        <section id="destinations">
+
+            <h2>Popular Destinations</h2>
+
+            <div class="cards">
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e" alt="">
+                    <div class="card-content">
+                        <h3>Maldives</h3>
+                        <p>
+                            Crystal clear water, luxury resorts, and relaxing beaches. A perfect getaway for couples and families.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a" alt="">
+                    <div class="card-content">
+                        <h3>Paris</h3>
+                        <p>
+                            Experience the Eiffel Tower, world-class museums, charming cafes, and the romantic streets of the City of Light.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1" alt="">
+                    <div class="card-content">
+                        <h3>Dubai</h3>
+                        <p>
+                            Discover luxury shopping, stunning modern architecture, and thrilling desert adventures in this futuristic city.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1523906834658-6e24ef2386f9" alt="">
+                    <div class="card-content">
+                        <h3>Rome</h3>
+                        <p>
+                            Explore ancient ruins like the Colosseum, Vatican City, and enjoy the delicious Italian cuisine.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1542301245-88c8de57b033" alt="">
+                    <div class="card-content">
+                        <h3>Santorini</h3>
+                        <p>
+                            Famous for its stunning sunsets, white-washed villages, and beautiful beaches. A gem of the Aegean Sea.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <img src="https://images.unsplash.com/photo-1496442226666-8d4d0e62e6e9" alt="">
+                    <div class="card-content">
+                        <h3>New York</h3>
+                        <p>
+                            The city that never sleeps. Visit Times Square, Central Park, and see a Broadway show.
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- PRICING -->
+
+        <section id="pricing">
+
+            <h2>Travel Packages</h2>
+
+            <div class="pricing-container">
+
+                <div class="price-box">
+                    <h3>Basic Package</h3>
+                    <div class="price">$499</div>
+
+                    <p>3 Days Trip</p>
+                    <p>3-Star Hotel Included</p>
+                    <p>Breakfast Included</p>
+                    <p>Airport Transfers</p>
+                    <p>City Tour</p>
+
+                    <br>
+
+                    <button class="btn">Book Now</button>
+                </div>
+
+                <div class="price-box">
+                    <h3>Premium Package</h3>
+                    <div class="price">$999</div>
+
+                    <p>7 Days Trip</p>
+                    <p>4-Star Luxury Hotel</p>
+                    <p>All Meals Included</p>
+                    <p>Private Tours</p>
+                    <p>24/7 Support</p>
+
+                    <br>
+
+                    <button class="btn">Book Now</button>
+                </div>
+
+                <div class="price-box">
+                    <h3>VIP Package</h3>
+                    <div class="price">$1999</div>
+
+                    <p>14 Days Trip< & Chauffeur</p>
+                    <p>All-Inclusive</p>
+                    <p>Exclusive Access/p>
+                    <p>5-Star Resort</p>
+                    <p>Private Guide</p>
+
+                    <br>
+
+                    <button class="btn">Book Now</button>
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- GALLERY -->
+
+        <section id="gallery">
+
+            <h2>Travel Gallery</h2>
+
+            <div class="gallery">
+
+                <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb" alt="">
+
+                <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d" alt="">
+
+                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee" alt="">
+
+                <img src="https://images.unsplash.com/photo-1532274402911-5a369e4c4bb5" alt="">
+
+                <img src="https://images.unsplash.com/photo-1505832018823-50331d703235" alt="">
+
+                <img src="https://images.unsplash.com/photo-1521295121783-8a321d551ad2" alt="">
+
+            </div>
+
+        </section>
+
+        <!-- CONTACT -->
+            <p style="text-align: center; max-width: 600px; margin: 0 auto 2rem auto;">
+                Have questions or ready to book your next adventure? Fill out the form below or contact us via phone or email. Our travel experts are here to help you 24/7.
+            </p>
+
+        <section id="contact">
+
+            <h2>Contact Us</h2>
+
+            <div class="contact-box">
+
+                <input type="text" placeholder="Your Name">
+
+                <input type="email" placeholder="Your Email">
+
+                <textarea rows="5" placeholder="Your Message"></textarea>
+
+                <button class="btn">Send Message</button>
+
+            </div>
+
+        </section>
+
+    </main>
+<p>© <span id="year"></span> TravelInfo | All Rights Reserved</p>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
